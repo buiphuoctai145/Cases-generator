@@ -233,7 +233,7 @@ function toYAML(conds, cases, equipmentTypeName, commandName) {
     lines.push(`EquipmentTypes:`);
     lines.push(`  - Name: ${yamlSafe((equipmentTypeName || 'Equipment').trim())}`);
     lines.push(`    Commands:`);
-    lines.push(`      - Name: ${(commandName || 'Command').trim()}`);
+    lines.push(`      - Name: ${yamlSafe((commandName || 'Command').trim())}`);
     lines.push(`        Scenarios:`);
     cases.forEach((c, idx) => {
         lines.push(`          - Name: Case ${idx + 1}`);
